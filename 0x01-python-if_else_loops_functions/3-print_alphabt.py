@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+for x in range(97, 123):
+	if chr(x) is not 'q' and chr(x) is not 'e':
+		print("{}".format(chr(x)), end = "")
