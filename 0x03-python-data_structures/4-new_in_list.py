@@ -7,4 +7,4 @@ def new_in_list(my_list, idx, element):
 
     buf = [x for x in my_list]
     buf[idx] = element
-    return (copy)
+    return (buf)
