@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 
 def list_division(my_list_1, my_list_2, list_length):
-    """divide each element of two lists by each other"""
+    """divide each element of two lists by each other
+    
+    Args:
+        my_list_1 (list): first list
+        my_list_2 (lisr): second list
+        list_length (int): no of elements
+    
+    Returns:
+        new list
+    """
     result_list = []
     for a in range(0, list_length):
         try:
