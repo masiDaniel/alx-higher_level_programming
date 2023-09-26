@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def safe_print_list_integers(my_list=[], x=0):
     """prints the first elements in a list
 
@@ -13,9 +14,9 @@ def safe_print_list_integers(my_list=[], x=0):
     num = 0
     for a in range(0, x):
         try:
-            print("{:d}".format(my_list[a], end=""))
+            print("{:d}".format(my_list[a]), end="")
             num += 1
-        except (TypeError, ValueError):
+        except (ValueError, TypeError):
             continue
     print("")
     return (num)
