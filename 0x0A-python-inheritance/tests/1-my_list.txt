@@ -1,0 +1,47 @@
+The "Mylist" module
+==========================
+
+using Mylist class
+------------------
+
+	>>> MyList = __import__('1-my_list').MyList
+
+	>>> m = __import__("1-my_list").__doc__
+	>>> len(m) > 1
+	True
+
+	>>> c = __import__("1-my_list").MyList.__doc__
+	>>> len(c) > 1
+	True
+
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(mod) > 1
+	True
+
+	>>> my_list = MyList()
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
+
+	>>> isinstance(my_list,list)
+	True
+
+	>>> print(my_list)
+	[]
+
+	>>> my_list.append(1)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> print(my_list)
+	[1, 2, 3]
+
+	>>> my_list.insert(1, -6)
+	>>> print(my_list)
+	[1, -6, 2, 3]
+
+	>>> my_list.print_sorted()
+	[-6, 1, 2, 3]
+
+	>>> new_list = my_list.print_sorted()
+	[-6, 1, 2, 3]
+	>>> isinstance(new_list, list)
+	False
