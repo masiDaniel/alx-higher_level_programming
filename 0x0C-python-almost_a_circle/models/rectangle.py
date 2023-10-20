@@ -87,11 +87,11 @@ class Rectangle(Base):
         """attributes update"""
         if args:
             attrbutes = ["id", "width", "height", "x", "y"]
-            for x, args in enumerate(args):
-                setattr = (self, attrbutes[x], args)
+            for x, arg in enumerate(args):
+                setattr(self, attrbutes[x], arg)
         elif kwargs:
             for key, value in kwargs.items():
-                setattr = (self,key, value)
+                setattr(self,key, value)
 
     def to_dictionary(self):
         """dictionary representstion of Rectangle"""
