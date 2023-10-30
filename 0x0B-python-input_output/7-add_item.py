@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" adds all args to a list then save to a file"""
+""" adds all arguments to a python list then
+    saves to a file"""
 import sys
 
 
@@ -12,7 +13,7 @@ try:
 except FileNotFoundError:
     my_list = []
 
-for x in range(1, len(sys.argv)):
-    my_list.append(sys.argv[x])
+for i in range(1, len(sys.argv)):
+    my_list.append(sys.argv[i])
 
 save_to_json_file(my_list, filename)
