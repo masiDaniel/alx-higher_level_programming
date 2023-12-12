@@ -1,3 +1,3 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const myVar = 'JavaScript is amaizing';
 console.log(myVar);
