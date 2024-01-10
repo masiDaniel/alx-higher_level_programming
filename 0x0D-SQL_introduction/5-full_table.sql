@@ -1,2 +1,2 @@
--- description of the table created
-SHOW CREATE TABLE 'first_table';
+-- full description of a table
+SHOW CREATE TABLE `first_table`;
