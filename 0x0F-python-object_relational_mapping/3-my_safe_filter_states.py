@@ -7,7 +7,7 @@ import sys
 
 
 def display_info():
-    """ unction that lists all the states """ 
+    """ unction that lists all the states """
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
