@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module listing all states starting with N (upper N) from hbtn_0e_0_usa."""
-
 import MySQLdb
 import sys
 
@@ -25,7 +24,6 @@ def filter_states():
 
     cur.close()
     db.close()
-
 
 
 if __name__ == "__main__":
