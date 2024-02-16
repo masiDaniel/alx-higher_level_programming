@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""values in the table of hbtn_0e_0_usa where name matches argument keyed in """
+"""values in hbtn_0e_0_usa where name matches argument keyed in """
 
 import MySQLdb
 import sys
