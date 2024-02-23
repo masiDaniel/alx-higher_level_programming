@@ -1,22 +1,29 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
+"""lists all cities of a specified state from the database"""
 
-from sys import argv
+import sys
 import MySQLdb
 
+def main():
+    """lists all cities of a specified state from the database"""
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
 
-def cities_from_state():
-    """
-    lists cities from a state
-    """
-    db = MySQLdb.connect(host=argv[2], passwd=argv[3], db=argv[4])
-    sql = "SELECT * FROM states WHERE name = {} ORDER BY id ASC;"
-    sql.format(argv[4])
-    cursor = db.cursor()
-    cursor.execute(sql)
-    results = cursor.fetchall()
-    for x in results:
-        print(x)
-
+    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name)
+    cur = db.cursor()
+    query_string = """SELECT cities.name
+                      FROM cities
+                      JOIN states ON cities.state_id = states.id
+                      WHERE states.name = %s
+                      ORDER BY cities.id ASC"""
+    params = (state_name, )
+    cur.execute(query_string, params)
+    rows = cur.fetchall()
+    print(", ".join(city[0] for city in rows))
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
-    cities_from_state()
+    main()
